@@ -102,3 +102,15 @@ variable "parameter_group_family_rds" {
   type    = string
   default = "postgres15"
 }
+
+variable "db_port" {
+  description = "Порт бази даних"
+  type        = number
+  default     = 5432
+}
+
+variable "allowed_cidr_blocks" {
+  description = "Список CIDR-блоків, яким дозволено доступ до БД"
+  type        = list(string)
+  default     = []
+}

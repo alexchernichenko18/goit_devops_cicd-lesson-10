@@ -17,6 +17,11 @@ output "internet_gateway_id" {
   description = "ID Internet Gateway"
   value       = aws_internet_gateway.igw.id
 }
+
+output "vpc_cidr_block" {
+  description = "CIDR блок VPC"
+  value       = aws_vpc.main.cidr_block
+}
 /*
 output "aws_eip_id" {
   description = "ID Elastic IP"
